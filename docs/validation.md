@@ -13,7 +13,7 @@ Validation date: 2026-10-01 (America/Los_Angeles). This record separates offline
 
 `pytest -q`: **35 passed** on the native host. The optional tensor compatibility test skips when Torch is not installed, including the lightweight CI environment. One dependency deprecation warning concerns Starlette's test client using httpx; the tests themselves pass.
 
-`ruff check .` and the JavaScript syntax check pass. Tests cover parsing limits, page provenance, overlapping chunks, duplicate imports, blank/encrypted PDFs, irrelevant-query abstention, per-paper retrieval, reference validation, multi-paper reference coverage, repetitive-output rejection, bounded repair, queue saturation, cached reports, Markdown export, arXiv identifier validation and cache reuse, and cross-origin write protection.
+`ruff check .` and the JavaScript syntax check pass. Pytest 8.3.5 and Ruff 0.11.5 are pinned to match native validation; the initial CI run exposed rule changes when an unpinned newer Ruff was installed. Tests cover parsing limits, page provenance, overlapping chunks, duplicate imports, blank/encrypted PDFs, irrelevant-query abstention, per-paper retrieval, reference validation, multi-paper reference coverage, repetitive-output rejection, bounded repair, queue saturation, cached reports, Markdown export, arXiv identifier validation and cache reuse, and cross-origin write protection.
 
 The committed [retrieval evaluation](../examples/retrieval-eval.json) reports:
 
