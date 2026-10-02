@@ -1,0 +1,26 @@
+{
+  "query": "low rank adaptation",
+  "status": 200,
+  "papers": [
+    {
+      "id": "2501.16372v1",
+      "title": "Low-Rank Adapters Meet Neural Architecture Search for LLM Compression",
+      "url": "https://arxiv.org/abs/2501.16372v1"
+    },
+    {
+      "id": "2412.09827v1",
+      "title": "Low-Rank Adaptation with Task-Relevant Feature Enhancement for Fine-tuning Language Models",
+      "url": "https://arxiv.org/abs/2412.09827v1"
+    },
+    {
+      "id": "2606.18024v1",
+      "title": "Catastrophic Forgetting is Low-Rank: A Function-Space Theory for Continual Adaptation",
+      "url": "https://arxiv.org/abs/2606.18024v1"
+    }
+  ],
+  "import": {
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "kind": "abstract",
+    "warning": "Abstract only: full methods and experiments are not available."
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "date": "2026-10-01 America/Los_Angeles",
+  "host": "Apple M2 / 8 GiB / macOS 13.3",
+  "profile": "CPU, 4 threads, dynamic INT8 linear layers, FP32 other modules; Qwen3-1.7B; seed 42; thinking disabled; max 700 new tokens",
+  "interpretation": "Single live smoke runs, not a latency benchmark or evidence of factual correctness. Queue time excluded. No paid API.",
+  "runs": [
+    {
+      "task": "question",
+      "status": "complete",
+      "source": "LoRA PDF",
+      "request": {
+        "task": "question",
+        "paper_ids": [
+          "35c0061fa31a33c9"
+        ],
+        "question": "Which model weights are frozen and which parameters are trained in LoRA?",
+        "language": "English"
+      },
+      "prompt_version": "1.6",
+      "usage": {
+        "provider": "local",
+        "model": "Qwen/Qwen3-1.7B",
+        "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "cold_start": true,
+        "seconds": 133.745,
+        "output_tokens": 178,
+        "token_limit_reached": false,
+        "quantization": "dynamic-int8",
+        "dtype": "float32",
+        "seed": 42,
+        "thinking": false,
+        "attempts": 1,
+        "total_generation_seconds": 133.745
+      },
+      "worker_seconds": 135.296,
+      "evidence_count": 6,
+      "reference_validation": {
+        "valid_reference_ids": true,
+        "cited": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "available": 6,
+        "semantic_support_verified": false,
+        "note": "Citation IDs point to retrieved excerpts. Read the evidence to verify each claim."
+      },
+      "warnings": []
+    },
+    {
+      "task": "summarize",
+      "status": "complete",
+      "source": "original synthetic teaching notes",
+      "request": {
+        "task": "summarize",
+        "paper_ids": [
+          "48945c9f88977c90"
+        ],
+        "question": "",
+        "language": "English"
+      },
+      "prompt_version": "1.6",
+      "usage": {
+        "provider": "local",
+        "model": "Qwen/Qwen3-1.7B",
+        "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "cold_start": false,
+        "seconds": 55.43,
+        "output_tokens": 280,
+        "token_limit_reached": false,
+        "quantization": "dynamic-int8",
+        "dtype": "float32",
+        "seed": 42,
+        "thinking": false,
+        "attempts": 2,
+        "total_generation_seconds": 125.94300000000001
+      },
+      "worker_seconds": 125.955,
+      "evidence_count": 2,
+      "reference_validation": {
+        "valid_reference_ids": true,
+        "cited": [
+          "E1",
+          "E2"
+        ],
+        "available": 2,
+        "semantic_support_verified": false,
+        "note": "Citation IDs point to retrieved excerpts. Read the evidence to verify each claim."
+      },
+      "warnings": []
+    },
+    {
+      "task": "compare",
+      "status": "complete",
+      "source": "original synthetic teaching notes",
+      "request": {
+        "task": "compare",
+        "paper_ids": [
+          "48945c9f88977c90",
+          "ccc37a73485c8ed8"
+        ],
+        "question": "",
+        "language": "English"
+      },
+      "prompt_version": "1.6",
+      "usage": {
+        "provider": "local",
+        "model": "Qwen/Qwen3-1.7B",
+        "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "cold_start": false,
+        "seconds": 60.983,
+        "output_tokens": 286,
+        "token_limit_reached": false,
+        "quantization": "dynamic-int8",
+        "dtype": "float32",
+        "seed": 42,
+        "thinking": false,
+        "attempts": 1,
+        "total_generation_seconds": 60.983
+      },
+      "worker_seconds": 60.99,
+      "evidence_count": 4,
+      "reference_validation": {
+        "valid_reference_ids": true,
+        "cited": [
+          "E2",
+          "E3"
+        ],
+        "available": 4,
+        "semantic_support_verified": false,
+        "note": "Citation IDs point to retrieved excerpts. Read the evidence to verify each claim."
+      },
+      "warnings": []
+    },
+    {
+      "task": "ideas",
+      "status": "complete",
+      "source": "original synthetic teaching notes",
+      "request": {
+        "task": "ideas",
+        "paper_ids": [
+          "48945c9f88977c90"
+        ],
+        "question": "Design two untested ablation experiments: (1) vary the adaptation rank, (2) vary which model layers receive the low-rank update. Keep the data split, training budget and optimizer fixed. Do not compare types of documents.",
+        "language": "English"
+      },
+      "prompt_version": "1.7",
+      "usage": {
+        "provider": "local",
+        "model": "Qwen/Qwen3-1.7B",
+        "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "cold_start": false,
+        "seconds": 70.597,
+        "output_tokens": 372,
+        "token_limit_reached": false,
+        "quantization": "dynamic-int8",
+        "dtype": "float32",
+        "seed": 42,
+        "thinking": false,
+        "attempts": 2,
+        "total_generation_seconds": 136.82
+      },
+      "worker_seconds": 136.845,
+      "evidence_count": 2,
+      "reference_validation": {
+        "valid_reference_ids": true,
+        "cited": [
+          "E1",
+          "E2"
+        ],
+        "available": 2,
+        "semantic_support_verified": false,
+        "note": "Citation IDs point to retrieved excerpts. Read the evidence to verify each claim."
+      },
+      "warnings": []
+    }
+  ]
+}

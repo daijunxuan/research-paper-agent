@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Demo note · Low-rank adaptation",
+    "pages": [
+      "SYNTHETIC TEACHING NOTE, NOT A PUBLISHED PAPER. Research question: can adaptation avoid updating every pretrained weight? Method: keep pretrained weights frozen and train a pair of low-rank matrices whose product defines an additive update. The trainable parameter budget depends on the rank and on the dimensions of the chosen layers. This note proposes measuring adaptation quality together with optimizer-state memory. It contains no measured benchmark results. The baseline is full fine-tuning under the same data split and training token budget. The proposed evaluation uses a held-out task set, identical preprocessing and multiple random seeds.",
+      "Limitations and experiment planning. A small rank may restrict the adaptation space; a larger rank increases trainable parameters and memory. To isolate the effect of rank, compare rank 4, 8 and 16 while holding the adapted layers, training examples, optimizer and evaluation procedure fixed. Evaluate held-out task quality and peak memory. The hypothesis is that some tasks need greater adaptation capacity; this is a proposed hypothesis, not an observed result. A separate ablation should compare which layers receive the low-rank update. Do not change rank and layer selection in the same causal comparison. Training efficiency does not by itself establish inference latency improvements."
+    ]
+  },
+  {
+    "title": "Demo note · Retrieval-augmented adaptation",
+    "pages": [
+      "SYNTHETIC TEACHING NOTE, NOT A PUBLISHED PAPER. Research question: can external passages supply changing knowledge without updating model weights? Method: split documents into passages, index them, retrieve a small evidence set for each question and condition generation on those passages. A lexical retrieval baseline uses BM25. All cited passages retain document identifiers and page numbers. The proposed system keeps the language model fixed and evaluates retrieval separately from answer quality. Evaluation should measure evidence recall, unsupported claims and end-to-end latency. This note supplies no measured scores and does not claim that retrieval guarantees correct answers.",
+      "Limitations and experiment planning. Retrieval failures can deprive generation of the necessary evidence. A useful ablation changes chunk size while keeping the corpus, overlap policy, query set and generator fixed. Another experiment compares top-k values of 2, 4 and 8 at a fixed context budget. Irrelevant retrieved passages may distract the generator, so increasing k is not assumed to improve answer quality. Citation IDs can be validated mechanically, but an existing citation does not prove that its passage entails the generated claim. An unanswerable-query set should measure when the system correctly abstains rather than inventing an answer."
+    ]
+  },
+  {
+    "title": "Demo note · Budgeted research evaluation",
+    "pages": [
+      "SYNTHETIC TEACHING NOTE, NOT A PUBLISHED PAPER. This note describes an evaluation protocol rather than a new model. Method: separate retrieval correctness, factual support, latency and resource use into distinct measurements. A curated question set records relevant source pages before evaluation. A no-retrieval baseline tests whether the generator uses supplied context. Report measured values with the device, model revision, prompt version and experimental settings. Minimum validation can start with a small manually labeled set, but a small set is not evidence of production quality. No numeric findings are reported here.",
+      "Limitations. Synthetic teaching notes make tests reproducible but do not represent the diversity of scientific papers. Two-column extraction, formulas, tables, scanned documents and multilingual queries each need targeted evaluation. A proposed robustness test injects irrelevant instructions into retrieved passages and checks that the application never grants them tool authority. The model has no shell, file-writing or browsing tools. Citation validation checks reference identity, while factual entailment needs human review or a separately validated evaluator. A resource plan should begin with a short pilot run before claiming a fixed GPU-hour budget."
+    ]
+  }
+]
+

@@ -1,0 +1,63 @@
+{
+  "dataset": "9 queries / 3 original synthetic notes / 6 pages",
+  "scope": "lexical retrieval regression, not scientific reasoning quality",
+  "recall_at_3": 1.0,
+  "mrr_at_3": 1.0,
+  "irrelevant_query_abstained": true,
+  "cases": [
+    {
+      "query": "frozen pretrained weights pair low rank matrices",
+      "relevant_note": 0,
+      "relevant_page": 1,
+      "rank_at_3": 1
+    },
+    {
+      "query": "rank 4 8 16 ablation",
+      "relevant_note": 0,
+      "relevant_page": 2,
+      "rank_at_3": 1
+    },
+    {
+      "query": "which layers receive low rank update",
+      "relevant_note": 0,
+      "relevant_page": 2,
+      "rank_at_3": 1
+    },
+    {
+      "query": "BM25 lexical passages identifiers page numbers",
+      "relevant_note": 1,
+      "relevant_page": 1,
+      "rank_at_3": 1
+    },
+    {
+      "query": "top k 2 4 8 context budget",
+      "relevant_note": 1,
+      "relevant_page": 2,
+      "rank_at_3": 1
+    },
+    {
+      "query": "unanswerable query abstain",
+      "relevant_note": 1,
+      "relevant_page": 2,
+      "rank_at_3": 1
+    },
+    {
+      "query": "device model revision prompt version",
+      "relevant_note": 2,
+      "relevant_page": 1,
+      "rank_at_3": 1
+    },
+    {
+      "query": "two column formulas tables scanned multilingual",
+      "relevant_note": 2,
+      "relevant_page": 2,
+      "rank_at_3": 1
+    },
+    {
+      "query": "irrelevant instructions tool authority shell",
+      "relevant_note": 2,
+      "relevant_page": 2,
+      "rank_at_3": 1
+    }
+  ]
+}

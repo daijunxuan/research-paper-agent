@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Papertrail — Research, with receipts.</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/"><span class="brand-mark">p<span>✳</span></span>papertrail<span class="beta">LAB</span></a>
+  <div class="workspace-label">YOUR WORKSPACE</div>
+  <div class="nav-active"><span>▤</span> Research library <span id="paper-count" class="count">0</span></div>
+  <div class="library-heading">PAPERS <button id="import-toggle" class="icon-button" title="Import a paper" aria-label="Import a paper">+</button></div>
+  <div id="library" class="library"></div>
+  <button id="demo" class="demo-button">Try the sample library <span>↗</span></button>
+  <p class="demo-note">Three clearly labeled teaching notes. No fabricated research results.</p>
+  <div class="sidebar-footer"><span class="status-dot"></span><div><strong>Local by default</strong><small>Your papers stay on this computer.</small></div></div>
+</aside>
+<div class="shell">
+<header class="topbar"><div>Workspace <span>/</span> <strong>Research desk</strong></div><div class="model-pill"><span class="status-dot"></span><span id="model">Connecting…</span></div></header>
+<main>
+  <div class="eyebrow">LESS TAB SWITCHING. MORE THINKING.</div>
+  <div class="hero"><div><h1>From paper to<br><em>your next experiment.</em></h1><p>Read the evidence. Connect the methods.<br>Turn a promising question into a testable plan.</p></div><div class="hero-note"><span>01 / RESEARCH DESK</span><div class="paper-drawing"><i></i><i></i><i></i><b>↗</b></div><small>Every answer starts<br>with a source.</small></div></div>
+  <section id="import-panel" class="import-panel hidden" aria-label="Import paper">
+    <div><h2>Add to your library</h2><p>Text-based PDF · up to 20 MiB · 120 pages</p></div>
+    <form id="pdf-form"><input id="pdf" type="file" accept=".pdf,application/pdf" required aria-label="Choose PDF"><button class="primary" type="submit">Import PDF</button></form>
+    <details><summary>Or paste paper text / notes</summary><form id="text-form"><input id="text-title" placeholder="Paper title" required maxlength="200" aria-label="Paper title"><textarea id="paper-text" placeholder="Paste at least 100 characters of source text…" minlength="100" maxlength="250000" required aria-label="Paper text"></textarea><button class="primary" type="submit">Import text</button></form></details>
+  </section>
+  <div class="section-label"><h2>What are you investigating?</h2><span id="selection-note">Select a paper to begin</span></div>
+  <div class="task-grid" role="group" aria-label="Research task">
+    <button class="task active" data-task="summarize"><span class="task-icon">▤</span><span class="task-number">01</span><strong>Understand a paper</strong><small>Question, method, findings & limits</small></button>
+    <button class="task" data-task="related"><span class="task-icon">⌕</span><span class="task-number">02</span><strong>Find related work</strong><small>Discover papers through arXiv</small></button>
+    <button class="task" data-task="compare"><span class="task-icon">⇄</span><span class="task-number">03</span><strong>Compare methods</strong><small>Put the approaches side by side</small></button>
+    <button class="task" data-task="ideas"><span class="task-icon">✳</span><span class="task-number">04</span><strong>Design an experiment</strong><small>Hypotheses, controls & metrics</small></button>
+  </div>
+  <section class="research-bar">
+    <label for="focus" id="focus-label">RESEARCH FOCUS <span>OPTIONAL</span></label>
+    <textarea id="focus" rows="2" placeholder="e.g. How could I test the memory–quality tradeoff on a small GPU?"></textarea>
+    <div class="research-actions"><div><select id="language" aria-label="Report language"><option>English</option><option>Chinese</option></select><button id="question-mode" class="text-button">Ask a specific question</button></div><button id="run" class="primary">Build research brief <span>↗</span></button></div>
+    <p id="external-note" class="hidden">Search sends only these keywords to arXiv. Your uploaded papers stay local.</p>
+  </section>
+  <div id="message" role="status" aria-live="polite" class="message hidden"></div>
+  <section class="output-grid">
+    <article class="report-panel"><div class="panel-heading"><h2 id="report-title">Research brief</h2><button id="export" class="text-button hidden">Export .md ↓</button></div>
+      <div id="trace" class="trace hidden"></div>
+      <div id="report" class="report"><div class="empty-state"><div class="empty-icon">⌁</div><h3>A useful answer has a paper trail.</h3><p>Import a paper or explore the sample library.<br>Your research brief and source references will appear here.</p><button id="empty-import" class="text-button">Add your first paper ↗</button></div></div>
+    </article>
+    <aside class="evidence-panel"><div class="panel-heading"><h2>Evidence ledger</h2><span id="evidence-count" class="count">0</span></div><p class="evidence-intro">Click a reference in the brief to inspect its source passage.</p><div id="evidence"><div class="evidence-placeholder"><span>“</span><p>Original passages.<br>Page numbers.<br>Room for your judgment.</p></div></div></aside>
+  </section>
+  <footer class="footnote">Built for reading critically. Reference checks verify source IDs, not whether every generated claim is true.</footer>
+</main></div>
+<script src="/static/app.js"></script>
+</body></html>
