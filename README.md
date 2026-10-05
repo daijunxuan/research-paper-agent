@@ -1,5 +1,7 @@
 # Papertrail · Research Paper Agent
 
+[![Tests](https://github.com/daijunxuan/research-paper-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/daijunxuan/research-paper-agent/actions/workflows/ci.yml) · [中文说明](docs/README.zh-CN.md)
+
 **From paper to your next experiment. A local-first RAG application for researchers.**
 
 Import a paper, inspect a grounded overview, discover related work, compare approaches, and draft an experiment plan with source passages beside every report. Runs Qwen locally, without paid API keys.
